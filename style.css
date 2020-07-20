@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Vinque";
+  font-family: 'vinqueregular';
   src: url('https://raw.githubusercontent.com/5he1n/Alerts/master/MGBerg/vinque_rg.woff2');
 }
 
@@ -28,7 +28,7 @@
     color: yellow;
     display: inline-block;
     font-size: 40px;
-    font-family: "Monda";
+    font-family: 'vinqueregular';
     font-weight: bold;
     letter-spacing: 4px;
     text-shadow: 0 0 30px white, 0 0 10px yellow;
