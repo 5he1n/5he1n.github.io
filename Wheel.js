@@ -42,6 +42,7 @@ document.head.appendChild(style);
 
 function createSlots (ring) {
 
+  slots = shuffle(slots);
 	var seed = getSeed();
 	
 
@@ -112,6 +113,17 @@ function measureText(string, fontSize = 10) {
     .split('')
     .map(c => c.charCodeAt(0) < widths.length ? widths[c.charCodeAt(0)] : avg)
     .reduce((cur, acc) => acc + cur) * fontSize
+}
+
+function shuffle(a) {
+  var j, x, i;
+  for (i = a.length - 1; i > 0; i--) {
+    j = Math.floor(Math.random() * (i + 1));
+    x = a[i];
+    a[i] = a[j];
+    a[j] = x;
+  }
+  return a;
 }
 
 $(document).ready(function() {
