@@ -55,20 +55,9 @@ body {
   float: center;
   transform-style: preserve-3d;
 }
-.slot {
-  position: absolute;
-  width: 200px;
-  height: 80px;
-  box-sizing: border-box;
-  opacity: 0.9;
-  color: rgba(0,0,0,0.9);
-  border: solid 2px #000;
-  -webkit-backface-visibility: hidden;
-     -moz-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
+
 .slot p {
-  font-family: 'Gill Sans MT', 'Gill Sans';
+  /* font-family: 'Gill Sans MT', 'Gill Sans'; */
   /* font-size: 46px; */
   font-weight: regular;
   color: white;

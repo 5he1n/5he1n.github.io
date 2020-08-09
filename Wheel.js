@@ -1,25 +1,28 @@
-// slots = Array(50).fill(["game", "user"]);
+// slots = Array(50).fill(["вцтфолвтфцлдвтф", "user"]);
 
+const SLOT_HEIGHT = 80
+const SLOT_WIDTH = 200
 const SLOTS_PER_REEL = slots.length;
-const REEL_RADIUS = 80/(2*Math.tan(Math.PI/SLOTS_PER_REEL));
-
-const slotAngle = 360 / SLOTS_PER_REEL;
+const REEL_RADIUS = SLOT_HEIGHT/(2*Math.tan(Math.PI/SLOTS_PER_REEL));
+const ROTATIONS_COUNT = 10;
+const DEFAULT_FONT_SIZE = 46;
+const MAX_getTextWidth_WIDTH = 37;
+const ROTATION_TIME = 20;
+const SLOT_BORDER_SIZE = 0;
+const SLOT_ANGLE = 360 / SLOTS_PER_REEL;
 
 
 var newStyle = ''
+
 for (var i = 0; i < SLOTS_PER_REEL; i ++) {
   newStyle = newStyle +`
     .spin-`+i+` {
-    transform: rotateX(`+(-3600+-(slotAngle*i))+`deg);
+    transform: rotateX(`+(-360*ROTATIONS_COUNT+-(SLOT_ANGLE*i))+`deg);
     }
-    `;
-}
-
-for (var i = 0; i < SLOTS_PER_REEL; i++) {
-  newStyle = newStyle + `
+    
     @keyframes spin-`+i+`{
-      0% { transform: rotateX(`+slotAngle+`deg); }
-      100% { transform: rotateX(`+(-3600-(slotAngle*i))+`deg); }
+      0% { transform: rotateX(`+SLOT_ANGLE+`deg); }
+      100% { transform: rotateX(`+(-360*ROTATIONS_COUNT-(SLOT_ANGLE*i))+`deg); }
     }
     `;
 }
@@ -33,6 +36,19 @@ newStyle = newStyle + `
     /* Ensure that we're in 3D space */
     transform-style: preserve-3d;
     transform: translateZ(-`+REEL_RADIUS+`px)
+  }
+  
+  .slot {
+    position: absolute;
+    width: `+SLOT_WIDTH+`px;
+    height: `+SLOT_HEIGHT+`px;
+    box - sizing: border - box;
+    opacity: 0.9;
+    color: rgba(0, 0, 0, 0.9);
+    border: solid `+SLOT_BORDER_SIZE+`px #000;
+    -webkit-backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
   }
 `
       
@@ -53,7 +69,7 @@ function createSlots (ring) {
 		
 		
 		// compute and assign the transform for this slot
-		var transform = 'rotateX(' + (slotAngle * i) + 'deg) translateZ(' + REEL_RADIUS + 'px)';
+		var transform = 'rotateX(' + (SLOT_ANGLE * i) + 'deg) translateZ(' + REEL_RADIUS + 'px)';
 
 		slot.style.transform = transform;
 
@@ -62,12 +78,12 @@ function createSlots (ring) {
 
 		var content = $(slot).append('<p id="slot-'+i+'" data-owner="'+slots[i][1]+'">' + slots[i][0] + '</p>');
 		
-	 
-	 var size = ((46*180)/measureText(slots[i][0], 46));
-	 if (size < 46) {
+	 //console.log(getTextWidth(slots[i][0], 'regular 46 Ubuntu'), (46*37)/getTextWidth(slots[i][0], 'regular 46 Ubuntu'));
+	 var size = ((DEFAULT_FONT_SIZE*MAX_getTextWidth_WIDTH)/getTextWidth(slots[i][0], 'regular '+DEFAULT_FONT_SIZE+' Ubuntu'));
+	 if (size < DEFAULT_FONT_SIZE) {
 	    slot.style.fontSize = size;
 	 } else {
-	    slot.style.fontSize = 46;
+	    slot.style.fontSize = DEFAULT_FONT_SIZE;
 	 }
 	 slot.style.backgroundColor = "#"+((1<<24)*Math.random()|0).toString(16);
 		
@@ -104,7 +120,7 @@ function spin(timer) {
 			.css('animation','spin-' + seed + ' ' + (timer + 0.5) + 's cubic-bezier(0.34, 1.56, 0.64, 1)')
 			.attr('class','ring spin-' + seed);
 		$('.go').fadeOut();
-		setTimeout(() => afterActs(), 11000);
+		setTimeout(() => afterActs(), (ROTATION_TIME+1)*1000);
 		
 		function afterActs () {
 		  $('.modal-body').text('Колесо выбрало '+$('#slot-'+seed).text()+' от '+$('#slot-'+seed).data('owner'));
@@ -112,19 +128,18 @@ function spin(timer) {
 		} 
 }
 
-function measureText(string, fontSize = 10) {
-  const widths = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.2765625, 0.271875, 0.3546875, 0.584375, 0.5421875, 0.6765625, 0.625, 0.1890625, 0.3234375, 0.3234375, 0.4171875, 0.584375, 0.2203125, 0.3234375, 0.2203125, 0.28125, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.2203125, 0.2296875, 0.584375, 0.584375, 0.584375, 0.334375, 1.0109375, 0.6671875, 0.5640625, 0.709375, 0.75, 0.5, 0.4703125, 0.740625, 0.7296875, 0.25, 0.25, 0.65625, 0.490625, 0.78125, 0.78125, 0.8234375, 0.5109375, 0.8234375, 0.6046875, 0.459375, 0.6046875, 0.709375, 0.6046875, 1.0421875, 0.709375, 0.6046875, 0.646875, 0.334375, 0.28125, 0.334375, 0.4703125, 0.553125, 0.334375, 0.428125, 0.5, 0.4390625, 0.5109375, 0.4796875, 0.25, 0.428125, 0.5, 0.2203125, 0.2203125, 0.4796875, 0.2203125, 0.771875, 0.5, 0.553125, 0.5, 0.5, 0.396875, 0.3859375, 0.334375, 0.5, 0.4390625, 0.7203125, 0.5, 0.4390625, 0.4171875, 0.334375, 0.2609375, 0.334375, 0.584375]
-  const avg = 0.4916118421052632
-  return string
-    .split('')
-    .map(c => c.charCodeAt(0) < widths.length ? widths[c.charCodeAt(0)] : avg)
-    .reduce((cur, acc) => acc + cur) * fontSize
+function getTextWidth(text, font) {
+      var canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
+      var context = canvas.getContext("2d");
+      context.font = font;
+      var metrics = context.measureText(text);
+      return metrics.width;
 }
 
 function shuffle(a) {
   var j, x, i;
   for (i = a.length - 1; i > 0; i--) {
-    j = Math.floor(Math.random() * (i + 1));
+    j = Math.floor(Math.random() * (i + 1));1
     x = a[i];
     a[i] = a[j];
     a[j] = x;
@@ -139,7 +154,7 @@ $(document).ready(function() {
 
  	// hook start button
  	$('.go').on('click',function(){
- 		var timer = 10;
+ 		var timer = ROTATION_TIME;
  		spin(timer);
  	});
  	
@@ -150,7 +165,7 @@ $(document).ready(function() {
  	 $('.modalGo').on('click',function(){
     $('#infoModal').modal('hide');
     $('.info').fadeOut();
- 		var timer = 10;
+ 		var timer = ROTATION_TIME;
  		spin(timer);
  	});
  });
