@@ -62,7 +62,13 @@ function createSlots (ring) {
 
 		var content = $(slot).append('<p id="slot-'+i+'" data-owner="'+slots[i][1]+'">' + slots[i][0] + '</p>');
 		
-	 slot.style.fontSize = ((46*180)/measureText(slots[i][0], 46));
+	 
+	 var size = ((46*180)/measureText(slots[i][0], 46));
+	 if (size < 46) {
+	    slot.style.fontSize = size;
+	 } else {
+	    slot.style.fontSize = 46;
+	 }
 	 slot.style.backgroundColor = "#"+((1<<24)*Math.random()|0).toString(16);
 		
 		// add the poster to the row

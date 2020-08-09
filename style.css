@@ -68,7 +68,7 @@ body {
           backface-visibility: hidden;
 }
 .slot p {
-  font-family: "Gill Sans";
+  font-family: 'Gill Sans MT', 'Gill Sans';
   /* font-size: 46px; */
   font-weight: regular;
   color: white;
