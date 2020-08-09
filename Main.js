@@ -11,7 +11,6 @@ function loadWheel() {
   });
 }
 
-
 $('.load').on('click', function() {
   loadWheel()
   clearInterval(counterBack);
@@ -39,4 +38,3 @@ function addAlert(message) {
   $('<div class="alert alert-success" style="display:none;">' +
     message + '</div>').prependTo('#alertbox').slideDown('slow');
 }
-

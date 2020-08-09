@@ -51,34 +51,26 @@ newStyle = newStyle + `
             backface-visibility: hidden;
   }
 `
-      
+
 var style = document.createElement('style');
 style.innerHTML = newStyle;
 document.head.appendChild(style);
 
 function createSlots (ring) {
-
   slots = shuffle(slots);
 	var seed = getSeed();
 	
-
 	for (var i = 0; i < SLOTS_PER_REEL; i ++) {
 		var slot = document.createElement('div');
 		
 		slot.className = 'slot';
 		
-		
-		// compute and assign the transform for this slot
 		var transform = 'rotateX(' + (SLOT_ANGLE * i) + 'deg) translateZ(' + REEL_RADIUS + 'px)';
 
 		slot.style.transform = transform;
 
-		// setup the number to show inside the slots
-		// the position is randomized to 
-
 		var content = $(slot).append('<p id="slot-'+i+'" data-owner="'+slots[i][1]+'">' + slots[i][0] + '</p>');
 		
-	 //console.log(getTextWidth(slots[i][0], 'regular 46 Ubuntu'), (46*37)/getTextWidth(slots[i][0], 'regular 46 Ubuntu'));
 	 var size = ((DEFAULT_FONT_SIZE*MAX_getTextWidth_WIDTH)/getTextWidth(slots[i][0], 'regular '+DEFAULT_FONT_SIZE+' Ubuntu'));
 	 if (size < DEFAULT_FONT_SIZE) {
 	    slot.style.fontSize = size;
@@ -87,23 +79,16 @@ function createSlots (ring) {
 	 }
 	 slot.style.backgroundColor = "#"+((1<<24)*Math.random()|0).toString(16);
 		
-		// add the poster to the row
 		ring.append(slot);
 	}
 }
 
 function getSeed() {
-	// generate random number smaller than 13 then floor it to settle between 0 and 12 inclusive
 	return Math.floor(Math.random()*(SLOTS_PER_REEL));
 }
 
 function spin(timer) {
-	//var txt = 'seeds: ';
 		var oldSeed = -1;
-		/*
-		checking that the old seed from the previous iteration is not the same as the current iteration;
-		if this happens then the reel will not spin at all
-		*/
 		var oldClass = $('#ringMain').attr('class');
 		
 		if(oldClass.length > 4) {
@@ -115,7 +100,6 @@ function spin(timer) {
 			seed = getSeed();
 		}
 		
-
 		$('#ringMain')
 			.css('animation','spin-' + seed + ' ' + (timer + 0.5) + 's cubic-bezier(0.34, 1.56, 0.64, 1)')
 			.attr('class','ring spin-' + seed);
@@ -148,11 +132,8 @@ function shuffle(a) {
 }
 
 $(document).ready(function() {
-
-	// initiate slots 
  	createSlots($('#ringMain'));
 
- 	// hook start button
  	$('.go').on('click',function(){
  		var timer = ROTATION_TIME;
  		spin(timer);
