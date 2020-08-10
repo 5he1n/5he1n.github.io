@@ -28,11 +28,15 @@ var counterBack = setInterval(function() {
 
 $('#form1').submit(function(e) {
   e.preventDefault();
-  for (var i = 0; i < $('#countInp').val(); i ++) {
-  slots.push([$('#gameInp').val(), $('#nameInp').val()]);
-  }
-  addAlert($('#nameInp').val()+" заказал <strong>"+$('#gameInp').val()+" x"+$('#countInp').val()+"</strong>");
+  addSlot($('#nameInp').val(), $('#gameInp').val(), $('#countInp').val());
 });
+
+function addSlot(name, game, q) {
+  for (var i = 0; i < q; i++) {
+    slots.push([game, name]);
+  }
+  addAlert(name + " заказал <strong>" + game + " x" + q + "</strong>");
+}
 
 function addAlert(message) {
   $('<div class="alert alert-success" style="display:none;">' +
