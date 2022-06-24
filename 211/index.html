@@ -1,0 +1,102 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div></div>
+    <div>
+        <p class="date">25.06.2022</p>
+        <h1 class="title">Экзамен по ТГ</h1>
+        <div class="alert">
+            <p class="link">📁 <a href="https://docs.google.com/spreadsheets/d/1UHgCQ8gfuhyLger1ZFRMd2kkY7Jl0gMQ/edit?usp=sharing&ouid=109829407706688817616&rtpof=true&sd=true" style="color: #000000">Билеты по теории графов</a><br></p>
+            <p class="comment">Если что-то отображается некорректно, <a href="https://t.me/Iam5he1n" style="color: #000000">обратитесь к Яну.</a></p>
+        </div>
+
+
+        <h3 class="group">211 группа</h3>
+        <div class="sheet-wrap">
+            <embed class="sheet" style="height: -webkit-fill-available" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ9HgZ1PhTS9EFYxMa3P-iVUj3a-2ZQykKdZ5fMBfSEf2JA1N_5U91caOmCgMh8lvOZBVfaYSSRe2GN/pubhtml?gid=0&single=true&widget=false&headers=false&chrome=false"></embed>        
+        </div>
+        <div class="after-sheet">
+            <p>
+            * Время выдачи и подключения указаны ориентировочно и могут измениться ближе к экзамену.
+            </p>
+            <br>
+            <p>
+                Дизайн: Даниил Коваленко. Автоматизация: Ян Шеин.
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<style>
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title {
+    font-size: 54;
+    margin-top: 0;
+}
+
+.sheet {
+    border: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sheet-wrap {
+    width: 100%;
+    height: 100vh;
+}
+
+.date {
+    color: #999999;
+    font-size: 16.5;
+    margin-bottom: 0;
+    margin-top: 10%;
+}
+
+.link {
+    font-size: 21;
+    font-weight: 700;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.alert {
+    width: 3fr;
+    background-color: #d9ead3;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-width: 790px;
+}
+
+.group {
+    font-size: 27;
+    margin-bottom: 0;
+}
+
+.after-sheet {
+    text-align: center;
+    color: #999999;
+    font-size: 12;
+}
+
+@media (min-width: 320px) and (max-width: 1201px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 9fr 1fr;
+    }
+}
+
+@media (min-width: 1201px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 2fr 3fr 2fr;
+    }
+}
+</style>
