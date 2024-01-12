@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <script src="script.js" defer></script>
+  <title>Park Kultur</title>
+</head>
+
+<header>
+  <nav id="nav_top">
+
+
+
+    <ul class='nav-bar'>
+      <li class='logo'>
+        <button class="button" id="burger-btn" onclick="scrollToTop()">
+          <div id="logo_photo">
+            <img src="media/other_media/Logo/Logo_White.png" alt="logo">
+          </div>
+        </button>
+      </li>
+      <input type='checkbox' id='check' />
+
+      <span class="menu">
+        <li><button class="button" onclick="scrollToHeight100vh()">о проекте</button></li>
+        <li><button class="button" onclick="scrollToHeight200vh()">о нас</button></li>
+        <li><button class="button" onclick="scrollToHeight300vh()">театр</button></li>
+        <li><button class="button" onclick="scrollToHeight400vh()">вишневый сад</button></li>
+        <li><button class="button" onclick="scrollToHeight600vh()">галерея</button></li>
+        <li><button class="button" onclick="scrollToHeight750vh()">актеры</button></li>
+        <script>
+
+        </script>
+        <li><button class="button" onclick="scrollToHeight850vh()">контакты</button></li>
+
+        <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+      </span>
+      <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+    </ul>
+  </nav>
+
+</header>
+
+
+
+<body>
+  <div id="first_page">
+    <div class="text">
+      <div id="h1">
+        <h1>PARK KULTUR</h1>
+      </div>
+
+      <div id="h2andh3">
+        <div id="h2">
+          <h2>творческое объединение</h2>
+        </div>
+
+        <div id="h3">
+          <h3>27.02 "Дорогая Елена Сергеевна" (Москва)</h3>
+          <h3>29.04 "Вишневый сад" (Москва)</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="second_page">
+    <div id="second_page_overlay">
+      <h3>Мы - творческое объединение<br>Мы ставим спектакли, снимаем кино<br>и выражаем себя через искусство</h3>
+    </div>
+  </div>
+
+
+  <div id="third_page">
+    <div class="third_page_heading">
+      <p id="third_page_heading">МЫ</p>
+    </div>
+
+    <div class="we">
+      <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="carousel">
+          <li class="card">
+            <div class="img"><img src="media/other_media/Icons_WE/Page_3_iconA_GOLIKOVA.png" alt="photo"></div>
+            <h2>Александра Голикова</h2>
+            <span>Режиссер</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="media/other_media/Icons_WE/Page_3_iconFGOLIKOV.png" alt="photo"></div>
+            <h2>Голиков <br>Фёдор</h2>
+            <span>Художник</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="media/other_media/Icons_WE/Page_3_iconIZMAILOVA.png" alt="photo"></div>
+            <h2>Арина Измайлова</h2>
+            <span>Драматург</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="media/other_media/Icons_WE/Page_3_iconSHEVALIE.png" alt="photo"></div>
+            <h2>Даниил</h2>
+            <h2 id="shevalie">Шевалье</h2>
+            <span>SMM</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="media/other_media/Icons_WE/Page_3_iconSHISHKOVA.png" alt="photo"></div>
+            <h2>Екатерина Шишкова</h2>
+            <span>Продюсер</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="media/other_media/Icons_WE/Page_3_iconSINICIN_DIMA.png" alt="photo"></div>
+            <h2>Дмитрий Синицын</h2>
+            <span>Кризис-менеджер</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="media/other_media/Icons_WE/Page_3_iconSTRELTSOVA.png" alt="photo"></div>
+            <h2>Надежда Стрельцова</h2>
+            <span>Генеральный продюсер</span>
+          </li>
+          <li class="card">
+            <div class="img"><img src="media/other_media/Icons_WE/Page_3_iconVICTORIAMASLOVA.png" alt="photo"></div>
+            <h2>Виктория Маслова</h2>
+            <span>Художник</span>
+          </li>
+        </ul>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="fourth_page">
+    <p id="fourth_page_heading">ТЕАТР</p>
+  </div>
+
+  <div id="fifth_page">
+    <p id="fifth_page_heading">Вишневый сад</p>
+  </div>
+    
+  <div id="sixth_page">
+    <p id="sixth_page_text">Вишневый сад для героев спектакля - это не просто несколько деревьев с плохим урожаем.
+      <br>Это символ их дома, уютного милого дома, из которого порой хочется сбежать. Зритель же в этом саду видит еще и образ эпохи, 
+      смены уклада жизни. Останется сад или его вырубят? Обретут дом наши герои или снова сбегут?</p>
+  </div>
+
+  <div id="seventh_page">
+    <p id="seventh_page_heading">Галерея</p>
+
+    <div class="we_7">
+      <div class="wrapper_7">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="carousel_7">
+          <li class="card_7">
+            <div class="img_7"><img src="media/other_media/Gallery/01.jpg" alt="photo"></div>
+          </li>
+          <li class="card_7">
+            <div class="img_7"><img src="media/other_media/Gallery/02.jpg" alt="photo"></div>
+          </li>
+          <li class="card_7">
+            <div class="img_7"><img src="media/other_media/Gallery/03.jpg" alt="photo"></div>
+          </li>
+          <li class="card_7">
+            <div class="img_7"><img src="media/other_media/Gallery/04.jpg" alt="photo"></div>
+          </li>
+          <li class="card_7">
+            <div class="img_7"><img src="media/other_media/Gallery/05.jpg" alt="photo"></div>
+          </li>
+          <li class="card_7">
+            <div class="img_7"><img src="media/other_media/Gallery/06.jpg" alt="photo"></div>
+          </li>
+          <li class="card_7">
+            <div class="img_7"><img src="media/other_media/Gallery/07.jpg" alt="photo"></div>
+          </li>
+          <li class="card_7">
+            <div class="img_7"><img src="media/other_media/Gallery/08.jpg" alt="photo"></div>
+          </li>
+          <li class="card_7">
+            <div class="img_7"><img src="media/other_media/Gallery/09.jpg" alt="photo"></div>
+          </li>
+        </ul>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+      </div>
+    </div>
+  </div>
+
+  <div id="eighth_page">
+    <p id="eighth_page_heading">Актеры</p>
+    
+    <div class="we_8">
+      <div class="wrapper_8">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="carousel_8">
+          <li class="card_8">
+            <div class="img_8"><img src="media/other_media/Actors/1.jpg" alt="photo"></div>
+          </li>
+          <li class="card_8">
+            <div class="img_8"><img src="media/other_media/Actors/2.jpg" alt="photo"></div>
+          </li>
+          <li class="card_8">
+            <div class="img_8"><img src="media/other_media/Actors/3.jpg" alt="photo"></div>
+          </li>
+          <li class="card_8">
+            <div class="img_8"><img src="media/other_media/Actors/4.jpg" alt="photo"></div>
+          </li>
+          <li class="card_8">
+            <div class="img_8"><img src="media/other_media/Actors/5.jpg" alt="photo"></div>
+          </li>
+          <li class="card_8">
+            <div class="img_8"><img src="media/other_media/Actors/6.jpg" alt="photo"></div>
+          </li>
+          <li class="card_8">
+            <div class="img_8"><img src="media/other_media/Actors/7.jpg" alt="photo"></div>
+          </li>
+          <li class="card_8">
+            <div class="img_8"><img src="media/other_media/Actors/8.jpg" alt="photo"></div>
+          </li>
+          <li class="card_8">
+            <div class="img_8"><img src="media/other_media/Actors/9.jpg" alt="photo"></div>
+          </li>
+          <li class="card_8">
+            <div class="img_8"><img src="media/other_media/Actors/10.jpg" alt="photo"></div>
+          </li>
+          <li class="card_8">
+            <div class="img_8"><img src="media/other_media/Actors/11.jpg" alt="photo"></div>
+          </li>
+          <li class="card_8">
+            <div class="img_8"><img src="media/other_media/Actors/12.jpg" alt="photo"></div>
+          </li>
+        </ul>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+      </div>
+    </div>
+  </div>
+
+  <div id="nineth_page">
+    <div id="nineth_page_content">
+      <p id="nineth_page_heading">Контакты</p>
+      <p id="contacts">Надежда Стрельцова:<br>
+        +1234567890<br>
+        post@parkkultur.ru
+      </p>
+
+      <p id="contacts">Даниил Шевалье:<br>
+        +0987654321<br>
+        smm@parkkultur.ru
+      </p>
+
+      <div id="media_links">
+        <a href="https://vk.com/park.kultur" target="_blank">
+          <img class="VKButton" src="media/vk.png" alt="VK">
+        </a>
+
+        <a href="https://www.instagram.com/park.kultur?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+          <img class="InstagramButton" src="media/Instagram.png" alt="Instagram">
+        </a> 
+
+        <a href="https://t.me/parkkultur" target="_blank">
+          <img class="TelegramButton" src="media/telegram.png" alt="Telegram">
+        </a>
+      
+        <a href="https://www.youtube.com/@park.kultur" target="_blank">
+          <img class="YouTubeButton" src="media/YouTube.png" alt="YouTube">
+        </a>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc91oE_3-cEeDFnvYvyPL4d6fBagBftTF9kR03-Ye3TH8u71g/viewform" target="_blank">
+          <img class="GoogleForms" src="media/googleform.png" alt="GoogleForms">
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</body>
+</html>
