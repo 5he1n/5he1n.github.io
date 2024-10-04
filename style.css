@@ -158,14 +158,18 @@ header{
 #first_page{
   position: relative;
   background-image: url('media/Pages/Page_1_BG.webp');
-  background-position: 50% 50%;
-  background-size: cover;
+  background-color: black;
+  /* background-position: 50% 50%;
+  background-size: cover; */
   height: var(--app-height);
   min-height: var(--app-height);
   display: flex;
   justify-content: end;
   align-items: center;
   width: 100%;
+  background-size:     contain;
+  background-repeat:   no-repeat;
+  background-position: center center;
 }
 
 .text{
@@ -284,8 +288,8 @@ header{
 /* ---------- third_page --------- */
 
 #third_page {
-  height: 1800px;
-  min-height: 1800px;
+  height: 2200px;
+  min-height: 2200px;
   background-image: url('media/Pages/Page_3_BG.webp');
   background-position: 50% 50%;
   background-size: 100% 100%;
@@ -298,6 +302,28 @@ header{
   margin: 0px;
   padding: 75px 0px 43px 75px;
   color: white;
+}
+
+.third_page_overlay {
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  width: 100%;
+  /* height: 100%; */
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.third_page_overlay h3 {
+  width: 55%;
+  /* text-align: center; */
+  color: white;
+  font-family: 'Hero-light';
+  font-size: 1.5em;
+  padding: 1.25px;
+  padding-bottom: 75px;
 }
 
 .we_content {
@@ -356,7 +382,8 @@ header{
 #fourth_page {
   height: 950px;
   min-height: 950px;
-  background-image: url('media/Pages/Page_7_BG.webp');
+  /* background-image: url('media/Pages/Page_7_BG.webp'); */
+  background-color: black;
   background-position: 50% 50%;
   background-size: cover;
   position: relative;
@@ -375,10 +402,12 @@ header{
 /* модальное окно №1 */
 
 .our_shows {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   gap: 100px;
+  padding-left: 33%;
 }
 
 #call-form {
@@ -731,12 +760,12 @@ p.modal_text {
 }
 
 .seventh_page_content {
-  height: 100%;
   width: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .seventh_page_heading {

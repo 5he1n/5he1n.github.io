@@ -66,6 +66,7 @@
 
   .second_page_overlay h3 {
     font-size: 3em;
+    width: 85%;
   }
 
   #third_page {
@@ -77,6 +78,11 @@
     font-size: 65px;
     padding-bottom: 30px;
     padding-left: 45px;
+  }
+
+  .third_page_overlay h3 {
+    font-size: 3em;
+    width: 75%;
   }
 
   .we_img img {
@@ -409,6 +415,10 @@
     padding-left: 45px;
   }
 
+  .third_page_overlay h3 {
+    font-size: 1.3em;
+  }
+
   .we_img img {
     width: 175px !important;
     height: 175px !important;
@@ -675,6 +685,10 @@
 
   .third_page_heading {
     font-size: 95px;
+  }
+
+  .third_page_overlay h3 {
+    font-size: 1.6em;
   }
 
     .we_content>div {
