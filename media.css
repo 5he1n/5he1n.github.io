@@ -51,12 +51,12 @@
     height: 24%;
   }
 
-  #first_page h1 {
+  #initial_block h1 {
     font-size: 13em;
     padding: 0px 30px 0px 30px;
   }
 
-  #first_page h2 {
+  #initial_block h2 {
     font-size: 3.8em;
   }
 
@@ -64,42 +64,42 @@
     font-size: 2.7em;
   }
 
-  .second_page_overlay h3 {
+  .about_project_block_overlay h3 {
     font-size: 3em;
     width: 85%;
   }
 
-  #third_page {
-    height: 3500px;
-    min-height: 3500px;
+  #about_us_block {
+    height: 4500px;
+    min-height: 4500px;
   }
 
-  .third_page_heading {
+  .about_us_block_heading {
     font-size: 65px;
     padding-bottom: 30px;
     padding-left: 45px;
   }
 
-  .third_page_overlay h3 {
+  .about_us_block_paragraph h3 {
     font-size: 3em;
     width: 75%;
   }
 
-  .we_img img {
+  .about_us_img img {
     width: 175px !important;
     height: 175px !important;
   }
 
-  .we_content>div {
+  .about_us_content>div {
     flex: 0 0 97%;
     max-width: 97%;
   }
   
-  .we_cards h2 {
+  .about_us_cards h2 {
     font-size: 33px;
   }
 
-  .we_cards p {
+  .about_us_cards p {
     font-size: 27px;
   }
 
@@ -107,12 +107,12 @@
     gap: 40px;
   }
 
-  #fourth_page {
-    height: 1200px;
-    min-height: 1200px;
+  #theatre_block {
+    height: 1300px;
+    min-height: 1300px;
   }
 
-  .fourth_page_heading {
+  .theatre_block_heading {
     font-size: 55px;
     padding-left: 45px;
     padding-bottom: 65px;
@@ -120,13 +120,13 @@
 
   #call-form {
     width: 250px;
-    height: 240px;
+    height: max-content;
     font-size: 22px;
   }
 
   #call-form-2 {
     width: 250px;
-    height: 240px;
+    height: max-content;
     font-size: 22px;
   }
 
@@ -141,9 +141,11 @@
   .our_shows {
     width: 100%;
     height: 980px;
-    gap: 250px;    
+    gap: 50px;    
     flex-direction: column;
-    justify-content: start;
+    /* justify-content: center; */
+    align-items: center;
+    padding-left: 0%;
   }
 
   .modal-parent {
@@ -152,7 +154,8 @@
   }
 
   .modal-wrapper {
-    height: 99%;
+    height: 80%;
+    width: 110%;
   }
 
   .modal {
@@ -200,12 +203,12 @@
   }
 
 
-  #fifth_page {
+  #affiche_page {
     height: 1130px;
     min-height: 1130px;
   }
 
-  .fifth_page_heading {
+  .affiche_page_heading {
     font-size: 55px;
     padding-left: 45px;
     padding-bottom: 10px;
@@ -264,27 +267,27 @@
     margin-top: 30px;
   }
 
-  #sixth_page {
+  #actors_page {
     height: 600px;
     min-height: 600px !important;
   }
 
-  .sixth_page_heading {
+  .actors_page_heading {
     font-size: 55px;
     padding: 75px 0px 45px 45px;
   }
 
-  .fourth_page_images {
+  .theatre_block_images {
     width: 300px;
     height: 300px;
   }
 
-  #seventh_page {
+  #contacts_page {
     height: 950px;
     min-height: 950px;
   }
 
-  .seventh_page_heading {
+  .contacts_page_heading {
     font-size: 55px;
   }
 
@@ -341,6 +344,15 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .initial_text_overlay_top{
+    top: 64px;
+  }
+
+  .initial_text_overlay_bottom{
+    bottom: 64px;
+  }
+}
 
 @media screen and (min-width: 544px) and (max-width: 575px){
   .text{
@@ -387,12 +399,12 @@
     right: 0;
   }
 
-  #first_page h1 {
+  #initial_block h1 {
     font-size: 5em;
     padding: 0px 30px 0px 30px;
   }
 
-  #first_page h2 {
+  #initial_block h2 {
     font-size: 2.1em;
   }
 
@@ -400,49 +412,49 @@
     font-size: 1.17em;
   }
 
-  .second_page_overlay h3 {
+  .about_project_block_overlay h3 {
     font-size: 1.3em;
   }
 
-  #third_page {
+  #about_us_block {
     height: 1850px;
     min-height: 1850px;
   }
 
-  .third_page_heading {
+  .about_us_block_heading {
     font-size: 90px;
     padding-bottom: 30px;
     padding-left: 45px;
   }
 
-  .third_page_overlay h3 {
+  .about_us_block_paragraph h3 {
     font-size: 1.3em;
   }
 
-  .we_img img {
+  .about_us_img img {
     width: 175px !important;
     height: 175px !important;
   }
 
-  .we_content>div {
+  .about_us_content>div {
     flex: 0 0 48%;
     max-width: 48%;
   }
   
-  .we_cards h2 {
+  .about_us_cards h2 {
     font-size: 28px;
   }
 
-  .we_cards p {
+  .about_us_cards p {
     font-size: 22px;
   }
 
-  #fourth_page{
+  #theatre_block{
     height: 700px;
     min-height: 700px;
   }
 
-  .fourth_page_heading {
+  .theatre_block_heading {
     font-size: 90px;
     padding-bottom: 30px;
     padding-left: 45px;
@@ -481,7 +493,8 @@
   }
 
   .modal-wrapper {
-    height: 99%;
+    height: 80%;
+    width: 110%;
   }
 
   .modal {
@@ -527,12 +540,12 @@
     font-size: 13px;
   }
 
-  #fifth_page {
+  #affiche_page {
     height: 1050px;
     min-height: 1050px;
   }
 
-  .fifth_page_heading {
+  .affiche_page_heading {
     font-size: 90px;
     padding-bottom: 30px;
     padding-left: 45px;
@@ -591,19 +604,23 @@
     margin-top: 30px;
   }
 
+  .afisha_action {
+    margin-left: 0;
+  }
 
-  .sixth_page_heading {
+
+  .actors_page_heading {
     font-size: 90px;
     padding-bottom: 70px;
     padding-left: 45px;
   }
 
-  #seventh_page {
+  #contacts_page {
     height: 950px;
     min-height: 950px;
   }
 
-  .seventh_page_heading {
+  .contacts_page_heading {
     font-size: 90px;
   }
 
@@ -661,12 +678,12 @@
     height: 20%;
   }
 
-  #first_page h1 {
+  #initial_block h1 {
     font-size: 5.5em;
     padding: 0px 30px 0px 30px;
   }
 
-  #first_page h2 {
+  #initial_block h2 {
     font-size: 2.1em;
   }
 
@@ -674,29 +691,29 @@
     font-size: 1.17em;
   }
 
-  .second_page_overlay h3 {
+  .about_project_block_overlay h3 {
     font-size: 1.6em;
   }
 
-  #third_page {
+  #about_us_block {
     height: 2250px;
     min-height: 2250px;
   }
 
-  .third_page_heading {
+  .about_us_block_heading {
     font-size: 95px;
   }
 
-  .third_page_overlay h3 {
+  .about_us_block_paragraph h3 {
     font-size: 1.6em;
   }
 
-    .we_content>div {
+    .about_us_content>div {
       flex: 0 0 48%;
       max-width: 48%;
     }
 
-  .fourth_page_heading {
+  .theatre_block_heading {
     font-size: 95px;
   }
 
@@ -730,7 +747,8 @@
   }
 
   .modal-wrapper {
-    height: 100%;
+    height: 80%;
+    width: 110%;
   }
 
   .modal {
@@ -773,11 +791,11 @@
     padding-top: 40px;
   }
 
-  .fifth_page_heading {
+  .affiche_page_heading {
     font-size: 95px;
   }
 
-  .sixth_page_heading {
+  .actors_page_heading {
     font-size: 95px;
   }
 
@@ -785,7 +803,7 @@
     padding-bottom: 20px;
   }
 
-  .seventh_page_heading {
+  .contacts_page_heading {
     font-size: 95px;
     padding-bottom: 20px;
   }
@@ -818,24 +836,24 @@
     height: 30%;
   }
 
-  #first_page h1 {
+  #initial_block h1 {
     font-size: 7em;
   }
 
-  #first_page h2 {
+  #initial_block h2 {
     font-size: 2.9em;
   }
 
-  .third_page_heading {
+  .about_us_block_heading {
     font-size: 105px;
   }
 
-  .we_cards h2 {
+  .about_us_cards h2 {
     font-size: 34px;
   }
 
 
-  .fourth_page_heading {
+  .theatre_block_heading {
     font-size: 105px;
   }
 
@@ -873,7 +891,8 @@
   }
 
   .modal-wrapper {
-    height: 100%;
+    height: 80%;
+    width: 110%;
   }
 
   .modal {
@@ -916,15 +935,15 @@
     margin-bottom: 30px;
   }
   
-  .fifth_page_heading {
+  .affiche_page_heading {
     font-size: 105px;
   }
 
-  .sixth_page_heading {
+  .actors_page_heading {
     font-size: 105px;
   }
 
-  .seventh_page_heading {
+  .contacts_page_heading {
     font-size: 105px;
   }
 }
@@ -935,11 +954,11 @@
     height: 30%;
   }
 
-  #first_page h1 {
+  #initial_block h1 {
     font-size: 7em;
   }
 
-  #first_page h2 {
+  #initial_block h2 {
     font-size: 2.9em;
   }
 
@@ -947,7 +966,7 @@
     font-size: 1.35em;
   }
 
-  .we_cards h2 {
+  .about_us_cards h2 {
     font-size: 34px;
   }
 
@@ -958,7 +977,8 @@
   }
 
   .modal-wrapper {
-    height: 100%;
+    height: 80%;
+    width: 110%;
   }
 
   .modal {
@@ -975,31 +995,31 @@
 
 
 @media screen and (max-height: 730px) {
-  #first_page{
+  #initial_block{
     min-height: 730px;
   }
 
-  #second_page{
+  #about_project_block{
     min-height: 730px;
   }
 
-  #third_page {
+  #about_us_block {
     min-height: 730px;
   }
 
-  #fourth_page {
+  #theatre_block {
     min-height: 730px;
   }
 
-  #fifth_page {
+  #affiche_page {
     min-height: 730px;
   }
 
-  #sixth_page {
+  #actors_page {
     min-height: 730px;
   }
 
-  #seventh_page {
+  #contacts_page {
     min-height: 730px;
   }
 }
