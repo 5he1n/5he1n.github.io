@@ -63,6 +63,9 @@
   .scroll_down_text{
     font-size: 2.7em;
   }
+  .scroll_down_container{
+    text-underline-offset: 0.5em;
+  }
 
   .about_project_block_overlay h3 {
     font-size: 3em;
@@ -70,8 +73,8 @@
   }
 
   #about_us_block {
-    height: 4500px;
-    min-height: 4500px;
+    height: 6600px;
+    min-height: 6600px;
   }
 
   .about_us_block_heading {
@@ -96,6 +99,10 @@
   }
   
   .about_us_cards h2 {
+    font-size: 33px;
+  }
+
+  .actors_cards h2{
     font-size: 33px;
   }
 
@@ -291,6 +298,10 @@
     font-size: 55px;
   }
 
+  .contacts_page_description{
+    font-size: 15px !important;
+  }
+
   .contacts_table {
     display: none;
   }
@@ -344,15 +355,34 @@
   }
 }
 
+@media screen and (max-width: 1900px) {
+  .initial_text_overlay_bottom{
+    bottom: 50px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .initial_text_overlay_top{
     top: 64px;
   }
 
   .initial_text_overlay_bottom{
-    bottom: 64px;
+    bottom: 100px;
   }
 }
+
+@media screen and (max-width: 1500px) {
+  .initial_text_overlay_bottom{
+    bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .initial_text_overlay_bottom{
+    bottom: 125px;
+  }
+}
+
 
 @media screen and (min-width: 544px) and (max-width: 575px){
   .text{
@@ -410,6 +440,10 @@
 
   .scroll_down_text{
     font-size: 1.17em;
+  }  
+
+  .scroll_down_container{
+    text-underline-offset: 0.25em;
   }
 
   .about_project_block_overlay h3 {
@@ -417,8 +451,8 @@
   }
 
   #about_us_block {
-    height: 1850px;
-    min-height: 1850px;
+    height: 4100px;
+    min-height: 4100px;
   }
 
   .about_us_block_heading {
@@ -446,6 +480,10 @@
   }
 
   .about_us_cards p {
+    font-size: 22px;
+  }
+
+  .actors_cards h2{
     font-size: 22px;
   }
 
@@ -690,14 +728,17 @@
   .scroll_down_text {
     font-size: 1.17em;
   }
+  .scroll_down_container{
+    text-underline-offset: 0.25em;
+  }
 
   .about_project_block_overlay h3 {
     font-size: 1.6em;
   }
 
   #about_us_block {
-    height: 2250px;
-    min-height: 2250px;
+    height: 5100px;
+    min-height: 5100px;
   }
 
   .about_us_block_heading {
@@ -806,6 +847,9 @@
   .contacts_page_heading {
     font-size: 95px;
     padding-bottom: 20px;
+
+  .contacts_page_description{
+    font-size: 15px !important;
   }
 
   .table_heading {
@@ -844,11 +888,20 @@
     font-size: 2.9em;
   }
 
+  #about_us_block {
+    height: 3300px;
+    min-height: 3300px;
+  }
+
   .about_us_block_heading {
     font-size: 105px;
   }
 
   .about_us_cards h2 {
+    font-size: 34px;
+  }
+
+  .actors_cards h2{
     font-size: 34px;
   }
 
@@ -859,6 +912,10 @@
 
   .scroll_down_text {
     font-size: 1.35em;
+  }  
+  
+  .scroll_down_container{
+    text-underline-offset: 0.25em;
   }
 
   #call-form {
@@ -966,7 +1023,15 @@
     font-size: 1.35em;
   }
 
+  .scroll_down_container{
+    text-underline-offset: 0.25em;
+  }
+
   .about_us_cards h2 {
+    font-size: 34px;
+  }
+
+  .actors_cards h2{
     font-size: 34px;
   }
 
@@ -1021,5 +1086,19 @@
 
   #contacts_page {
     min-height: 730px;
+  }
+}
+
+@media screen and (min-width: 1563px) and (max-width: 1793px) {
+  #about_us_block {
+    height: 3100px;
+    min-height: 3100px;
+  }
+}
+
+@media screen and (min-width: 1216px) and (max-width: 1562px) {
+  #about_us_block {
+    height: 3250px;
+    min-height: 3250px;
   }
 }

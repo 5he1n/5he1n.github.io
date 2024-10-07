@@ -196,7 +196,7 @@ header{
   width: 100%;
   aspect-ratio: 1920 / 600;
   position: absolute; /* Allow it to overlap */
-  bottom: -1em;
+  bottom: -15px;
   left: 0;
   z-index: 0;
 }
@@ -244,7 +244,6 @@ header{
 }
 
 .scroll_down_container{
-
   bottom: 5vh;
   width: 100%;
   position: fixed;
@@ -253,6 +252,8 @@ header{
   justify-content: center;
   align-items: center;
   animation: bounce 2s infinite;
+  text-decoration-color: white;
+  text-underline-offset: 0.1em;
 }
 
 @keyframes bounce {
@@ -272,6 +273,15 @@ header{
   60% {
     transform: translateY(-5px);
   }
+}
+
+.scroll_down_text{
+  font-size: 1.5em;
+  font-family: 'Hero-regular';
+  color: white;
+  margin: 0px;
+  text-align: center;
+  margin-bottom: -25px;
 }
 
 /* ---------- /initial_block --------- */
@@ -317,8 +327,8 @@ header{
 /* ---------- about_us_block --------- */
 
 #about_us_block {
-  height: 2200px;
-  min-height: 2200px;
+  height: 3050px;
+  min-height: 3050px;
   background-image: url('media/Pages/Page_3_BG.webp');
   background-position: 50% 50%;
   background-size: cover;
@@ -725,8 +735,8 @@ p.modal_text {
 /* ---------- actors_page --------- */
 
 #actors_page {
-  height: 800px;
-  min-height: 800px;
+  height: 1000px;
+  min-height: 1000px;
   background-image: url('media/Pages/Page_8_BG.webp');
   background-position: 50% 50%;
   background-size: cover;
@@ -747,6 +757,14 @@ p.modal_text {
 .actors_cards {
   text-decoration: none;
   flex-shrink: 0;
+}
+
+.actors_cards h2{
+  font-family: 'Mak-bold';
+  color: white;
+  font-size: 2.6rem;
+  margin: 30px 0 5px;
+  text-align: center;
 }
 
 .actors_gallery_nav {
@@ -776,8 +794,8 @@ p.modal_text {
 /* ---------- contacts_page --------- */
 
 #contacts_page {
-  height: 700px;
-  min-height: 700px;
+  height: 750px;
+  min-height: 750px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -803,6 +821,14 @@ p.modal_text {
   font-size: 7em;
   margin: 0px;
   color: var(--contacts-color);
+}
+
+.contacts_page_description{
+  font-family: 'Hero-regular';
+  color: var(--contacts-color);
+  font-size: 1em;
+  text-align: start;
+  margin-bottom: 2em;
 }
 
 .contacts_page_overlay {
