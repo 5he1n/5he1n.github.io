@@ -65,8 +65,8 @@
   }
 
   .initial_text_overlay_bottom{
-    bottom: 125px;
-  }
+    bottom: 200px;
+  } 
 
   .scroll_down_text{
     font-size: 2.7em;
@@ -81,8 +81,8 @@
   }
 
   #about_us_block {
-    height: 6600px;
-    min-height: 6600px;
+    height: 7050px;
+    min-height: 7050px;
   }
 
   .about_us_block_heading {
