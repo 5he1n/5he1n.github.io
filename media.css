@@ -81,8 +81,8 @@
   }
 
   #about_us_block {
-    height: 7050px;
-    min-height: 7050px;
+    height: fit-content;
+    min-height: fit-content;
   }
 
   .about_us_block_heading {
@@ -97,14 +97,14 @@
   }
 
   .about_us_img img {
-    width: 175px !important;
-    height: 175px !important;
+    width: 300px !important;
+    height: 300px !important;
   }
 
-  .about_us_content>div {
+  /* .about_us_content>div {
     flex: 0 0 97%;
     max-width: 97%;
-  }
+  } */
   
   .about_us_cards h2 {
     font-size: 33px;
@@ -123,8 +123,8 @@
   }
 
   #theatre_block {
-    height: 1300px;
-    min-height: 1300px;
+    height: fit-content;
+    min-height: fit-content;
   }
 
   .theatre_block_heading {
@@ -219,8 +219,8 @@
 
 
   #affiche_page {
-    height: 1130px;
-    min-height: 1130px;
+    height: 700px;
+    min-height: 700px;
   }
 
   .affiche_page_heading {
@@ -283,8 +283,8 @@
   }
 
   #actors_page {
-    height: 600px;
-    min-height: 600px !important;
+    height: 660px;
+    min-height: 660px !important;
   }
 
   .actors_page_heading {
@@ -315,6 +315,14 @@
   }
 
   .contacts_table_media {
+    display: block;
+  }
+
+  .about_us_content {
+    display: none;
+  }
+
+  .about_us_content_media {
     display: block;
   }
 
@@ -437,8 +445,8 @@
   }
 
   #about_us_block {
-    height: 4100px;
-    min-height: 4100px;
+    height: fit-content;
+    min-height: fit-content;
   }
 
   .about_us_block_heading {
@@ -452,14 +460,14 @@
   }
 
   .about_us_img img {
-    width: 175px !important;
-    height: 175px !important;
+    width: 300px !important;
+    height: 300px !important;
   }
 
-  .about_us_content>div {
+  /* .about_us_content>div {
     flex: 0 0 48%;
     max-width: 48%;
-  }
+  } */
   
   .about_us_cards h2 {
     font-size: 28px;
@@ -656,6 +664,14 @@
     display: block;
   }
 
+  .about_us_content {
+    display: none;
+  }
+
+  .about_us_content_media {
+    display: block;
+  }
+
   .table_heading_with_padding {
     padding-top: 50px !important;
   }
@@ -735,8 +751,8 @@
   }
 
   #about_us_block {
-    height: 5100px;
-    min-height: 5100px;
+    height: fit-content;
+    min-height: fit-content;
   }
 
   .about_us_block_heading {
@@ -887,8 +903,8 @@
   }
 
   #about_us_block {
-    height: 3300px;
-    min-height: 3300px;
+    height: fit-content;
+    min-height: fit-content;
   }
 
   .about_us_block_heading {
@@ -1067,7 +1083,7 @@
   }
 
   #about_us_block {
-    min-height: 730px;
+    min-height: fit-content;
   }
 
   #theatre_block {
@@ -1089,15 +1105,15 @@
 
 @media screen and (min-width: 1563px) and (max-width: 1793px) {
   #about_us_block {
-    height: 3100px;
-    min-height: 3100px;
+    height: fit-content;
+    min-height: fit-content;
   }
 }
 
 @media screen and (min-width: 1216px) and (max-width: 1562px) {
   #about_us_block {
-    height: 3250px;
-    min-height: 3250px;
+    height: fit-content;
+    min-height: fit-content;
   }
 }
 

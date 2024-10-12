@@ -327,8 +327,8 @@ header{
 /* ---------- about_us_block --------- */
 
 #about_us_block {
-  height: 3050px;
-  min-height: 3050px;
+  height: fit-content;
+  min-height: fit-content;
   background-image: url('media/Pages/Page_3_BG.webp');
   background-position: 50% 50%;
   background-size: cover;
@@ -371,6 +371,10 @@ header{
   justify-content: center;
   width: 95%;
   margin: auto;
+}
+
+.about_us_content_media {
+  display: none;
 }
 
 .about_us_content>div {
@@ -754,6 +758,10 @@ p.modal_text {
   overflow: hidden;
 }
 
+.about_us_content_media {
+  overflow: hidden;
+}
+
 .actors_cards {
   text-decoration: none;
   flex-shrink: 0;
@@ -775,12 +783,32 @@ p.modal_text {
   gap: 50px;
 }
 
+.about_us_gallery_nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 50px;
+}
+
 .actors_gallery__btn {
   width: 28px;
   height: 28px;
 }
 
 .actors_gallery__btn svg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  fill: white;
+}
+
+.about_us_gallery__btn {
+  width: 28px;
+  height: 28px;
+}
+
+.about_us_gallery__btn svg {
   width: 100%;
   height: 100%;
   object-fit: cover;
